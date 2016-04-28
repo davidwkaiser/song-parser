@@ -7,6 +7,10 @@ gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
+gem 'thin'
+gem 'treat'
+gem 'lingo'
+
 gem 'activesupport'
 gem 'activerecord'
 gem 'bcrypt-ruby'
