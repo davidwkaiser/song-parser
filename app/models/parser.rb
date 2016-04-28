@@ -17,8 +17,8 @@ def remove_endline(string)
   string.gsub!(/\n/, ' ')
 end
 
-def remove_punctuation(string)
-  string.gsub!(/[\.\/\,\*. \!, \?, \', \", \[, \], \d]/, ' ')
+def remove_non_word_characters(string)
+  string.gsub!(/[\d\W]/, ' ')
 end
 
 def string_to_array(string)
@@ -29,12 +29,24 @@ def scrub_string_into_array(string)
   remove_asterisks(string)
   remove_notice(string)
   remove_endline(string)
-  remove_punctuation(string)
+  remove_non_word_characters(string)
   string.downcase!
   array_of_words = string_to_array(string)
 end
 
-lyric_string2 = "Here, have a dollar,\nin fact, no brother-man here, have two\nTwo dollars means a snack for me,\nbut it means a big deal to you\n\"Be strong, serve God only,\nknow that if you do, beautiful heaven awaits\"\nThat's the poem I wrote for the first time\nI saw a man with no clothes, no money, no plate\nMr. Wendal, that's his name,\nno one ever knew his name cause he's a no-one\nNever thought twice about spending on a ol' bum,\nuntil I had the chance to really get to know one\nNow that I know him, to give him money isn't charity\nHe gives me some knowledge, I buy him some shoes\nAnd to think blacks spend all that money on big colleges,\n...\n\n******* This Lyrics is NOT for Commercial use *******"
+lyric_string2 = " You were my sun You were my earth But you didn't know all the ways I loved you, no So you took a chance And made other plans But I bet you didn't think that they would come crashing down, no
+ You don't have to say, what you did, I already know, I found out from him Now there's just no chance, for you and me, there'll never be And don't it make you sad about it
+ You told me you loved me Why did you leave me, all alone Now you tell me you need me When you call me, on the phone Girl I refuse, you must have me confused With some other guy Your bridges were burned, and now it's your turn To cry, cry me a river Cry me a river-er Cry me a river Cry me a river-er, yea yea
+ I know that they say That somethings are better left unsaid It wasn't like you only talked to him and you know it (Don't act like you don't know it) All of these things people told me Keep messing with my head (Messing with my head) You should've picked honesty Then you may not have blown it (Yea..)
+ You don't have to say, what you did, (Don't have to say, what you did) I already know, I found out from him (I already know, uh) Now there's just no chance, for you and me, there'll never be (No chance, you and me) And don't it make you sad about it
+ You told me you loved me Why did you leave me, all alone (All alone) Now you tell me you need me When you call me, on the phone (When you call me on the phone) Girl I refuse, you must have me confused With some other guy (I'm not like them baby) Your bridges were burned, and now it's your turn (It's your turn) To cry, cry me a river (Go on and just) Cry me a river-er (Go on and just) Cry me a river (Baby go on and just) Cry me a river-er, yea yea
+ Oh (Oh) The damage is done So I guess I be leaving Oh (Oh) The damage is done So I guess I be leaving Oh (Oh) The damage is done So I guess I be leaving Oh (Oh) The damage is done So I guess I be... leaving
+ You don't have to say, what you did, (Don't have to say, what you did) I already know, I found out from him (I already know, uh) Now there's just no chance, for you and me, there'll never be (No chance, you and me) And don't it make you sad about it
+ Cry me a river (Go on and just) Cry me a river-er (Baby go on and just) Cry me a river (You can go on and just) Cry me a river-er, yea yea
+ Cry me a river (Baby go on and just) Cry me a river-er (Go on and just) Cry me a river (Cause I've already cried) Cry me a river-er, yea yea (Ain't gonna cry no more, yea-yea)
+ Cry me a river Cry me a river, oh Cry me a river, oh Cry me a river, oh
+ Cry me a river, oh (Cry me, cry me) Cry me a river, oh (Cry me, cry me) Cry me a river, oh (Cry me, cry me) Cry me a river, oh (Cry me, cry me)
+ Cry me a river, oh (Cry me, cry me) Cry me a river, oh (Cry me, cry me) Cry me a river (Cry me, cry me)  "
 
 lyric_string3 = "Talk to me softly
 There's something in your eyes
@@ -208,7 +220,7 @@ def present_song_themes(song)
   return_themes(sorted_word_count)
 end
 
-p present_song_themes(lyric_string4)
+p present_song_themes(lyric_string2)
 
 
 
