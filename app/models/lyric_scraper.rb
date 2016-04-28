@@ -3,13 +3,14 @@ require 'open-uri'
 
 google_url = "https://www.google.com/?gws_rd=ssl#q=lyrics"
 
-song = "born to run"
+song = "cry me a river"
 song_words = song.split(' ')
 
 song_words.each do |word|
   google_url += "+" + word
 end
 
+puts google_url
 html = open(google_url)
 ndoc = Nokogiri.parse(html)
 puts ndoc
@@ -21,12 +22,17 @@ puts ndoc
 # nokogiri_document = Nokogiri.parse(html)
 
 # lyrics = nokogiri_document.css('.lyrics > p').to_s
+lyrics = ndoc.css('.lyrics > p').to_s
 
-# def scrub_tags(text)
-#  text.gsub!(/<.{1,3}>/,' ')
-# end
+#this worked for don't cry, not born to run
+#maybe look for div class two above <br> element
 
-# puts scrub_tags(lyrics)
+
+def scrub_tags(text)
+ text.gsub!(/<.{1,3}>/,' ')
+end
+
+puts scrub_tags(lyrics)
 # puts lyrics
 
 #use nokogiri to search google
