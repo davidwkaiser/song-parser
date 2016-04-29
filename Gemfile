@@ -9,11 +9,15 @@ gem 'sinatra-contrib'
 
 gem 'thin'
 gem 'treat'
-gem 'lingo'
+# gem 'lingo'
+gem 'rubyzip',  "~> 0.9.9"
 
+# gem 'open-uri'
+gem 'nokogiri'
 gem 'activesupport'
 gem 'activerecord'
 gem 'bcrypt-ruby'
+# gem 'net/http'
 
 gem 'rake'
 

@@ -19,6 +19,7 @@ GEM
     bcrypt (3.1.10)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
+    birch (0.0.8)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -26,8 +27,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    daemons (1.2.3)
     database_cleaner (1.4.1)
     diff-lcs (1.2.5)
+    eventmachine (1.2.0.1)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     faker (1.4.3)
@@ -41,6 +44,7 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pg (0.18.2)
+    progressbar (0.21.0)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
@@ -60,6 +64,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
+    rubyzip (0.9.9)
+    schiphol (0.9.4)
+      progressbar (>= 0.10.0)
+      rubyzip (>= 0.9.6.1)
     shotgun (0.9.1)
       rack (>= 1.0)
     shoulda-matchers (2.8.0)
@@ -75,12 +83,21 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
+    thin (1.6.4)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (~> 1.0)
     thread_safe (0.3.5)
     tilt (1.4.1)
+    treat (2.1.0)
+      birch
+      schiphol
+      yomu
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    yomu (0.1.5)
 
 PLATFORMS
   ruby
@@ -93,11 +110,18 @@ DEPENDENCIES
   database_cleaner (~> 1.4.1)
   factory_girl
   faker
+  nokogiri
   pg
   rack-test
   rake
   rspec
+  rubyzip (~> 0.9.9)
   shotgun
   shoulda-matchers
   sinatra
   sinatra-contrib
+  thin
+  treat
+
+BUNDLED WITH
+   1.11.2

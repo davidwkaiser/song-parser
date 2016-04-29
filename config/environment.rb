@@ -14,11 +14,15 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
+require 'nokogiri'
+require 'open-uri'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
+# include 'treat'
+# require 'rubyzip',
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))

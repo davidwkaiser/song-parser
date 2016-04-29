@@ -1,9 +1,10 @@
 require 'nokogiri'
 require 'open-uri'
+require 'net/http'
 
 google_url = "https://www.google.com/?gws_rd=ssl#q=lyrics"
 
-song = "cry me a river"
+song = "lumineers ophelia"
 song_words = song.split(' ')
 
 song_words.each do |word|
@@ -13,7 +14,9 @@ end
 puts google_url
 html = open(google_url)
 ndoc = Nokogiri.parse(html)
-puts ndoc
+# puts ndoc
+# puts "*****"
+puts ndoc.css('')
 
 # url = "https://play.google.com/music/preview/Tnlwgpr4rl62zblmhhowiep653a?lyrics=1&utm_source=google&utm_medium=search&utm_campaign=lyrics&pcampaignid=kp-lyrics"
 
