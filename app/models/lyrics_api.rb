@@ -27,6 +27,8 @@ get_lyrics = open(new_url)
 ndoc_lyrics = Nokogiri.parse(get_lyrics)
 # puts ndoc_lyrics
 words = ndoc_lyrics.xpath("//lyric").first.content
+puts "Possible themes are .........."
+
 puts words
 
 
