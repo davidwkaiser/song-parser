@@ -5,3 +5,5 @@ This is just basic stuff, no semantic web. Nonetheless, while it was fun to buil
 it was only partially successful, as often the most common words were "la" or "love" or a  
 name. This could work, of course, but it would need to be much more sophisticated, to strip out a   
 lot of the nonsense and to link words together by semantic theme. Perhaps another day.   
+
+@dwkphd
