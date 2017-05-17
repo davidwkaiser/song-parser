@@ -7,3 +7,7 @@ name. This could work, of course, but it would need to be much more sophisticate
 lot of the nonsense and to link words together by semantic theme. Perhaps another day.   
 
 @dwkphd
+
+I am looking for a role as a (Jr) Developer.   
+I know Ruby, Rails, JavaScript, jQuery, AJAX, HTML / CSS, SQL, and I'm teaching myself Node.JS and Angular2  
+See my portfolio site at http://davidwkaiser.squarespace.com
